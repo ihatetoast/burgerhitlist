@@ -1,0 +1,22 @@
+{
+  "name": "14_burger",
+  "version": "1.0.0",
+  "description": "a burger lister",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "handlebars",
+    "mysql"
+  ],
+  "author": "Katy Cassidy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
