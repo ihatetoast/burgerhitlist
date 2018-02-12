@@ -1,1 +1,6 @@
--- In this file, write insert queries to populate the `burgers` table with at least three entries.
+
+INSERT INTO burgers(burger_name,devoured)
+VALUES("Soursop's Water Burger",false),
+      ("Soursop's Firer Burger",false),
+      ("Hot Mess's HTM Burger",false); 
+
