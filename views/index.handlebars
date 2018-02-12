@@ -6,7 +6,7 @@
 <ul>
   {{#each burgers}}
   	<li>
-  		<p><span class="label">burga:</span> {{this.id}}</p>
+  		<p><span class="label">burga:</span> {{this.burger_name}}</p>
       <button data-id="{{this.id}}" class="devour">Eedit!</button>
   	</li>
   {{/each}}
@@ -17,14 +17,9 @@
 <form class="create-form">
 
   <div class="form-group">
-    <label for="auth">Author:</label>
-    <input type="text" id="auth" name="author">
+    <label for="burger">Burger:</label>
+    <input type="text" id="burger" name="burger">
   </div>
 
-  <div class="form-group">
-    <label for="quo">Quote:</label>
-    <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
-  </div>
-
-  <button type="submit">Add Quote</button>
+  <button type="submit">Adda Burga</button>
 </form>

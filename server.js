@@ -17,7 +17,9 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //ROUTES -->controllers
-require("./controllers/burgers_controller.js")(app);
+var routes = require("./controllers/burgers_controller.js");
+
+app.use(routes);
 // require("./controllers/burgers_controller")(app);
 //and within the controller ...
 // * `selectAll()` 
