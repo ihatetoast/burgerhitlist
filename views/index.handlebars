@@ -1,25 +1,22 @@
-<h1>Eet-Da-Burga</h1>
-
-<h3>Goan. Eed'em!</h3>
+<h3>Invastion of the UFOs!</h3>
 
 <!-- Pass in data from server.js -->
 <ul>
-  {{#each burgers}}
+  {{#each projects}}
   	<li>
-  		<p><span class="label">burga:</span> {{this.burger_name}}</p>
-      <button data-id="{{this.id}}" class="devour">Eedit!</button>
+  		<p><span class="label">UFO {{this.id}}:</span> {{this.project_name}}</p>
+      <button data-id="{{this.id}}" class="finished">F'ed!</button>
   	</li>
   {{/each}}
 </ul>
 
-<h3>Add a Quote</h3>
 
 <form class="create-form">
 
   <div class="form-group">
-    <label for="burger">Burger:</label>
-    <input type="text" id="burger" name="burger">
+    <label for="project">UFO:</label>
+    <input type="text" id="ufo" name="ufo">
   </div>
 
-  <button type="submit">Adda Burga</button>
+  <button type="submit">Add UFO</button>
 </form>

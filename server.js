@@ -17,10 +17,10 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //ROUTES -->controllers
-var routes = require("./controllers/burgers_controller.js");
+var routes = require("./controllers/projects_controller.js");
 
 app.use(routes);
-// require("./controllers/burgers_controller")(app);
+// require("./controllers/projects_controller")(app);
 //and within the controller ...
 // * `selectAll()` 
 // * `insertOne()` build as in build-a-burger
@@ -28,4 +28,4 @@ app.use(routes);
 // app.use(routes);
 // require("./app/routing/apiRoutes")(app);
 
-app.listen(PORT,() => console.log("Burgers found on port "+PORT));
+app.listen(PORT,() => console.log("UFOs spotted on telescope  "+PORT));

@@ -1,6 +1,6 @@
 
-INSERT INTO burgers(burger_name,devoured)
-VALUES("Soursop's Water Burger",false),
-      ("Soursop's Firer Burger",false),
-      ("Hot Mess's HTM Burger",false); 
+INSERT INTO ufos(project_name,craft,finished)
+VALUES("Mason's blanket", "crochet",false),
+      ("Bayeux tapestry", "cross-stitch",false),
+      ("Cupcake blanket","embroidery",false); 
 

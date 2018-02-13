@@ -1,8 +1,9 @@
-CREATE DATABASE `burgers_db`;
-USE `burgers_db`;
+CREATE DATABASE `ufos_db`;
+USE `ufos_db`;
 
-CREATE TABLE `burgers` (
+CREATE TABLE `ufos` (
   id INT PRIMARY KEY AUTO_INCREMENT, 
-  burger_name varchar(50) NOT NULL,
-  devoured BOOL NOT NULL default 0
+  project_name varchar(75) NOT NULL,
+  craft VARCHAR(50) NOT NULL,
+  finished BOOL NOT NULL default 0
 );

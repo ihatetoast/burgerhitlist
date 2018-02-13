@@ -1,10 +1,15 @@
 var orm = require("../config/orm.js");
 
-const burger ={
-  //orm fcns go here: all, build (create), update (devour)
+const project ={
+  //orm fcns go here: all, build (create), update (finish), and update, (edit?)
   all: function(cb){
     // tableInput, callback
-    orm.all("burgers", function(res){
+    orm.all("ufos", function(res){
+      cb(res);
+    })
+  },
+  create: function(columns, values, cb){
+    orm.create("ufos", columns, values, function(res){
       cb(res);
     })
   }
@@ -16,4 +21,4 @@ const burger ={
 
 
 //required by burgers_controller
-module.exports = burger;
+module.exports = project;

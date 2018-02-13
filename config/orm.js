@@ -40,5 +40,5 @@ var orm = {
   }
   
 };
-//required by burger.js model
+//required by projects.js model
 module.exports = orm;
