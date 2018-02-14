@@ -1,7 +1,8 @@
 <h2>Invastion of the UFOs!</h2>
 
 <!-- Pass in data from server.js -->
-<h3>UFOs I'm tackling</h3>
+<h3>UFOs I'm hiding from:</h3>
+{{!-- You can use the unless helper as the inverse of the if helper. Its block will be rendered if the expression returns a falsy value. --}}
 <ul>
   {{#each projects}}
     {{#unless inProg}}
@@ -10,7 +11,7 @@
   {{/each}}
 </ul>
 
-<h3>UFOs I'm hiding from</h3>
+<h3>UFOs I'm tackling:</h3>
 
 <ul>
   {{#each projects}}

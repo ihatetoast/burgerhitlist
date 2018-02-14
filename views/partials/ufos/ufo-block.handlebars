@@ -1,7 +1,7 @@
 <li>
   {{this.project_name}} | {{this.craft}}
-  <button class="isActive" data-id="{{id}}" data-active="{{ active }}">
-    {{#if active}}On it!{{else}}Waiting{{/if}}
+  <button class="inProg" data-id="{{id}}" data-active="{{inProg}}">
+    {{#if inProg}}On it!{{else}}Waiting{{/if}}
   </button>
-  <button class="deleteUfo" data-id="{{ id }}" data-id="{{ this.id }}">F'ed!</button>
+  <button class="deleteUfo" data-id="{{this.id}}">F'ed!</button>
 </li>

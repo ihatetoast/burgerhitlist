@@ -44,14 +44,19 @@ var orm = {
     var queryString = "INSERT INTO " + table;
     queryString += " ("+cols.toString() + ") ";
     queryString += "VALUES (" + printQuestionMarks(vals.length) + ") ";
-    //how does it look?
-    console.log(`queryString is  ${queryString}`);
     connection.query(queryString, vals, function(err, result){
       if(err) throw err;
-      cb(result)
+      cb(result);
+    })
+  },
+  delete: function(table, condition, cb){
+    var queryString = "DELETE FROM "+table;
+    queryString += " WHERE "+ condition;
+    connection.query(queryString, function(err, result){
+      if(err) throw err;
+      cb(result);
     })
   }
-  
 };
 //required by projects.js model
 module.exports = orm;

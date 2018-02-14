@@ -12,6 +12,11 @@ const project ={
     orm.create("ufos", cols, vals, function(res){
       cb(res);
     })
+  },
+  delete: function(condition,cb){
+    orm.delete("ufos", condition, function(res){
+      cb(res);
+    });
   }
   
 }
@@ -22,3 +27,4 @@ const project ={
 
 //required by burgers_controller
 module.exports = project;
+
