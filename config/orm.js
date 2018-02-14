@@ -38,8 +38,6 @@ var orm = {
       cb(result);
     });
   },
-//   INSERT INTO ufos(project_name,craft,inProg, finished)
-// VALUES("Mason's blanket", "crochet",false, false),
   create: function(table, cols, vals, cb){
     var queryString = "INSERT INTO " + table;
     queryString += " ("+cols.toString() + ") ";
