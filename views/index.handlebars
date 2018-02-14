@@ -1,21 +1,36 @@
-<h3>Invastion of the UFOs!</h3>
+<h2>Invastion of the UFOs!</h2>
 
 <!-- Pass in data from server.js -->
+<h3>UFOs I'm tackling</h3>
 <ul>
   {{#each projects}}
-  	<li>
-  		<p><span class="label">UFO {{this.id}}:</span> {{this.project_name}}</p>
-      <button data-id="{{this.id}}" class="finished">F'ed!</button>
-  	</li>
+    {{#unless inProg}}
+      {{> ufos/ufo-block active=true}}
+  	{{/unless}}
   {{/each}}
 </ul>
 
+<h3>UFOs I'm hiding from</h3>
 
-<form class="create-form">
+<ul>
+  {{#each projects}}
+    {{#if inProg}}
+      {{> ufos/ufo-block active=false }}
+  	{{/if }}
+  {{/each}}
+</ul>
+<form class="create-form" id="addUfo">
 
   <div class="form-group">
-    <label for="project">UFO:</label>
+    <label for="ufo">UFO:</label>
     <input type="text" id="ufo" name="ufo">
+    <label for="craft">Craft:</label>
+    <input type="text" id="craft" name="craft">
+  </div>
+  <div class="form-group">
+    <label for="inProg">Working on it?</label><br>
+    <input type="radio" name="inProg" value="0" checked> Nope!<br>
+    <input type="radio" name="inProg" value="1"> Yup!
   </div>
 
   <button type="submit">Add UFO</button>

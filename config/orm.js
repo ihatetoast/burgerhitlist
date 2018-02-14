@@ -37,6 +37,19 @@ var orm = {
       }
       cb(result);
     });
+  },
+//   INSERT INTO ufos(project_name,craft,inProg, finished)
+// VALUES("Mason's blanket", "crochet",false, false),
+  create: function(table, cols, vals, cb){
+    var queryString = "INSERT INTO " + table;
+    queryString += " ("+cols.toString() + ") ";
+    queryString += "VALUES (" + printQuestionMarks(vals.length) + ") ";
+    //how does it look?
+    console.log(`queryString is  ${queryString}`);
+    connection.query(queryString, vals, function(err, result){
+      if(err) throw err;
+      cb(result)
+    })
   }
   
 };

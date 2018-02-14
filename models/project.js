@@ -8,8 +8,8 @@ const project ={
       cb(res);
     })
   },
-  create: function(columns, values, cb){
-    orm.create("ufos", columns, values, function(res){
+  create: function(cols, vals, cb){
+    orm.create("ufos", cols, vals, function(res){
       cb(res);
     })
   }

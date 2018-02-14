@@ -14,19 +14,27 @@ router.get("/", function(req, res) {
     res.render("index", hbsObject);
   });
 });
+
+
+router.post("/api/ufos", function(req, res) {
+  project.create([
+    "project_name","craft", "inProg","finished"
+  ], [
+    req.body.name, req.body.craft, req.body.inProg, req.body.finished
+  ], function(result) {
+
+    res.json({ id: result.insertId });
+  });
+});
+
+
+
+
+
+
 // Export routes for server.js to use.
 module.exports = router;
 
-// router.post("/api/cats", function(req, res) {
-//   cat.create([
-//     "name", "sleepy"
-//   ], [
-//     req.body.name, req.body.sleepy
-//   ], function(result) {
-//     // Send back the ID of the new quote
-//     res.json({ id: result.insertId });
-//   });
-// });
 
 // router.put("/api/cats/:id", function(req, res) {
 //   var condition = "id = " + req.params.id;
