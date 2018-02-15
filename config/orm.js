@@ -54,6 +54,14 @@ var orm = {
       if(err) throw err;
       cb(result);
     })
+  },
+  update: function(table, colValsObject, condition, cb){
+    var queryString = "UPDATE " + table + " SET " + objToSql(colValsObject) + " WHERE " + condition;
+    console.log(queryString);
+    connection.query(queryString, function(err, result){
+      if(err) throw err;
+      cb(result);
+    })
   }
 };
 //required by projects.js model

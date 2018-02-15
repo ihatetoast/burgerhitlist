@@ -17,6 +17,11 @@ const project ={
     orm.delete("ufos", condition, function(res){
       cb(res);
     });
+  },
+  update: function(colValsObject, condition, cb){
+    orm.update("ufos", colValsObject, condition, function(res){
+      cb(res);
+    })
   }
   
 }

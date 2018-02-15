@@ -2,11 +2,10 @@
 
 <!-- Pass in data from server.js -->
 <h3>UFOs I'm hiding from:</h3>
-{{!-- You can use the unless helper as the inverse of the if helper. Its block will be rendered if the expression returns a falsy value. --}}
 <ul>
   {{#each projects}}
     {{#unless inProg}}
-      {{> ufos/ufo-block active=true}}
+      {{> ufos/ufo-block prog=true}}
   	{{/unless}}
   {{/each}}
 </ul>
@@ -16,7 +15,7 @@
 <ul>
   {{#each projects}}
     {{#if inProg}}
-      {{> ufos/ufo-block active=false }}
+      {{> ufos/ufo-block prog=false }}
   	{{/if }}
   {{/each}}
 </ul>
@@ -30,7 +29,7 @@
   </div>
   <div class="form-group">
     <label for="inProg">Working on it?</label><br>
-    <input type="radio" name="inProg" value="0" checked> Nope!<br>
+    <input type="radio" name="inProg" value="0" checked> Nope!
     <input type="radio" name="inProg" value="1"> Yup!
   </div>
 
