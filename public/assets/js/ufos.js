@@ -1,5 +1,9 @@
 $(function(){
   $("#addUfo").on("submit", function(e){
+    if(($("#ufo").val().trim()==="") || ($("#craft").val().trim()==="")){
+      alert("There's no point in empty input fields, you weenus.")
+      return false;
+    }
     e.preventDefault();
     let newUfo = {
       name: $("#ufo").val().trim(),

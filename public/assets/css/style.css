@@ -1,27 +1,147 @@
 * {
   box-sizing: border-box; }
 
-header h1 {
-  font-family: 'Crafty Girls', cursive;
-  font-size: 2em; }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Jaldi', sans-serif;
+  background-color: #b2ff9e; }
 
-.burgerBaby {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-  /* Set up proportionate scaling */
+header, footer {
+  align-items: center;
+  background-color: #3c1642;
+  display: flex;
+  flex-direction: column;
+  padding: 1em; }
+  header h1, footer h1 {
+    color: #affc41;
+    font-family: 'Crafty Girls', cursive;
+    font-size: 3em; }
+  header h3, footer h3 {
+    color: #fcfffd;
+    font-family: 'Jaldi', sans-serif;
+    font-size: 2em; }
+  header p, footer p {
+    color: #affc41;
+    font-size: 1.5em; }
+    header p span, footer p span {
+      color: #fcfffd;
+      font-size: 0.5em;
+      font-style: italic; }
+
+button {
+  background: #3c1642;
+  background-image: -webkit-linear-gradient(top, #3c1642, #732980);
+  background-image: linear-gradient(to bottom, #3c1642, #732980);
+  -webkit-border-radius: 8;
+  border-radius: 8px;
+  color: #fcfffd;
+  font-size: 0.8em;
+  padding: 0.3em 0.4em 0.3em 0.4em;
+  text-decoration: none;
+  margin-left: 0.5em; }
+
+button:hover {
+  color: #affc41; }
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; }
+
+.introPara {
+  margin-top: 1em;
+  padding: 1em;
+  background-color: #fcfffd;
+  width: 75%; }
+  .introPara p {
+    font-size: 1.5em;
+    line-height: 1.2em; }
+
+.ufoHolder {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  width: 75%; }
+  @media screen and (min-width: 1024px) {
+    .ufoHolder {
+      flex-direction: row;
+      justify-content: space-between; } }
+
+.dataDisplay {
+  border: 3px solid #1dd3b0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.4em;
+  background-color: #fcfffd; }
+  @media screen and (min-width: 1024px) {
+    .dataDisplay {
+      width: 69%; } }
+
+.titleBar {
+  background-color: #086375;
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
+  padding: 0.5em;
+  text-align: center; }
+  .titleBar h2 {
+    font-family: 'Crafty Girls', cursive;
+    font-size: 1.5em;
+    color: #fcfffd; }
+
+.ufoData, .ufoForm {
+  padding: 0em 1em 1em 1em;
+  font-size: 1.5em; }
+  .ufoData h3, .ufoForm h3 {
+    color: #3c1642;
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+    margin-top: 0.3em; }
+  .ufoData li, .ufoForm li {
+    font-size: 1.25em; }
+
+input[type=text] {
   width: 100%;
-  height: auto;
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0; }
+  padding: 0.75em;
+  border: 1px solid #affc41;
+  border-radius: 0.25em;
+  resize: vertical;
+  font-size: 0.6em; }
 
-@media screen and (max-width: 1024px) {
-  /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;
-    /* 50% */ } }
+.form-container {
+  border: 3px solid #1dd3b0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.4em;
+  background-color: #fcfffd; }
+  @media screen and (min-width: 1024px) {
+    .form-container {
+      width: 30%; } }
+
+label {
+  padding: 0.75em 0.75em 0.75em 0;
+  display: inline-block; }
+
+.col-25 {
+  float: left;
+  width: 22%;
+  margin-top: 0.45em; }
+
+.col-75 {
+  float: left;
+  width: 72%;
+  margin-top: 0.45em; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media (max-width: 600px) {
+  .col-25, .col-75 {
+    width: 100%;
+    margin-top: 0; } }
 
 /*# sourceMappingURL=style.css.map */

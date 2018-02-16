@@ -1,32 +1,173 @@
+$eggplant: #3c1642;
+$teal: rgba(8, 99, 117, 1);
+$aqua: rgba(29, 211, 176, 1);
+$lime: #affc41;
+$lightlime: #b2ff9e;
+$white: rgba(252, 255, 253, 1);
+$black:rgba(11, 4, 12, 1);
 * {
   box-sizing: border-box;
 }
 // font-family: 'Crafty Girls', cursive;
-// font-family: 'Jaldi', sans-serif;
-header{
-  h1{
-    font-family: 'Crafty Girls', cursive;
-    font-size: 2em;
-  }
-}
-.burgerBaby {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-	
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-	
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+// 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Jaldi', sans-serif;
+  background-color: $lightlime;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
+header, footer{
+  align-items: center;
+  background-color: $eggplant;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  h1{
+    color: $lime;
+    font-family: 'Crafty Girls', cursive;
+    font-size: 3em;
+  }
+  h3 {
+    color: $white;
+    font-family: 'Jaldi', sans-serif;
+    font-size: 2em;
+  }
+  p {
+    color: $lime;
+    font-size: 1.5em;
+    span{
+      color: $white;
+      font-size: 0.5em;
+      font-style: italic;
+    }
+  }
+}
+button {
+  background: #3c1642;
+  background-image: -webkit-linear-gradient(top, $eggplant, #732980);
+  background-image: linear-gradient(to bottom, $eggplant, #732980);
+  -webkit-border-radius: 8;
+  border-radius: 8px;
+  color: $white;
+  font-size: 0.8em;
+  padding: 0.3em 0.4em 0.3em 0.4em;
+  text-decoration: none;
+  margin-left: 0.5em;
+}
+button:hover{
+  color: $lime;
+}
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.introPara {
+  margin-top: 1em;
+  padding: 1em;
+  background-color: $white;
+  width: 75%;
+  p {
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+}
+
+// form and data
+
+.ufoHolder {
+  display: flex;
+  flex-direction:column;
+  margin-top: 2em;
+  width: 75%;
+  @media screen and (min-width: 1024px){
+    flex-direction:row;
+    justify-content: space-between;
+  }
+}
+.dataDisplay{
+  border: 3px solid $aqua;
+  display:flex;
+  flex-direction: column;
+  border-radius: 0.4em;
+  background-color:$white;
+  @media screen and (min-width: 1024px){
+    width:69%;
+  }
+  
+}
+.titleBar{
+  background-color: $teal;
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
+  padding: 0.5em;
+  text-align: center;
+  h2 {
+    font-family:'Crafty Girls', cursive;
+    font-size: 1.5em;
+    color: $white;
+  }
+}
+.ufoData, .ufoForm{
+  padding: 0em 1em 1em 1em;
+  font-size: 1.5em;
+  h3{
+    color: $eggplant;
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+    margin-top: 0.3em;
+  }
+  li{
+    font-size: 1.25em;
+  }
+}
+input[type=text] {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid $lime;
+  border-radius: 0.25em;
+  resize: vertical;
+  font-size: 0.6em;
+}
+
+.form-container{
+  border: 3px solid $aqua;
+  display:flex;
+  flex-direction: column;
+  border-radius: 0.4em;
+  background-color:$white;
+  
+  @media screen and (min-width: 1024px){
+    width: 30%;
+  }
+}
+label {
+  padding: 0.75em 0.75em 0.75em 0;
+
+  display: inline-block;
+}
+.col-25 {
+  float: left;
+  width: 22%;
+  margin-top: 0.45em;
+}
+.col-75 {
+  float: left;
+  width: 72%;
+  margin-top: 0.45em;
+}
+//clear floats
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 600px) {
+  .col-25, .col-75 {
+    width: 100%;
+    margin-top: 0;
   }
 }

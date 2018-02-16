@@ -1,37 +1,62 @@
-<h2>Invastion of the UFOs!</h2>
+<div class="ufoHolder">
+  <div class="dataDisplay">
+    <div class="titleBar">
+      <h2>Invastion of the UFOs!</h2>
+    </div>
+    
+  <div class="ufoData">
+    <!-- Pass in data from server.js -->
+    <h3>UFOs I'm attacking:</h3>
+    <ul>
+      {{#each projects}}
+        {{#unless inProg}}
+          {{> ufos/ufo-block prog=true}}
+        {{/unless}}
+      {{/each}}
+    </ul>
 
-<!-- Pass in data from server.js -->
-<h3>UFOs I'm hiding from:</h3>
-<ul>
-  {{#each projects}}
-    {{#unless inProg}}
-      {{> ufos/ufo-block prog=true}}
-  	{{/unless}}
-  {{/each}}
-</ul>
+    <h3>UFOs I'm hiding from:</h3>
 
-<h3>UFOs I'm tackling:</h3>
-
-<ul>
-  {{#each projects}}
-    {{#if inProg}}
-      {{> ufos/ufo-block prog=false }}
-  	{{/if }}
-  {{/each}}
-</ul>
-<form class="create-form" id="addUfo">
-
-  <div class="form-group">
-    <label for="ufo">UFO:</label>
-    <input type="text" id="ufo" name="ufo">
-    <label for="craft">Craft:</label>
-    <input type="text" id="craft" name="craft">
+    <ul>
+      {{#each projects}}
+        {{#if inProg}}
+          {{> ufos/ufo-block prog=false }}
+        {{/if }}
+      {{/each}}
+    </ul>
   </div>
-  <div class="form-group">
-    <label for="inProg">Working on it?</label><br>
-    <input type="radio" name="inProg" value="0" checked> Nope!
-    <input type="radio" name="inProg" value="1"> Yup!
   </div>
 
-  <button type="submit">Add UFO</button>
-</form>
+  <div class="form-container">
+    <div class="titleBar">
+      <h2>Input sightings!</h2>
+    </div>
+    <form class="ufoForm" id="addUfo">
+      <div class="input-block">
+        <div class="row">
+          <div class="col-25">
+            <label for="ufo">UFO:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="ufo" name="ufo">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="craft">Craft:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="craft" name="craft">
+          </div>
+        </div>
+      </div>
+      
+      <div class="buttons-block">
+        <label for="inProg">Currently attacking it?</label> <br>
+        <input type="radio" name="inProg" value="0" checked> Nope!
+        <input type="radio" name="inProg" value="1"> Yup!
+      </div>
+      <button type="submit">Add UFO</button>
+    </form>
+  </div>
+</div>

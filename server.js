@@ -20,12 +20,5 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/projects_controller.js");
 
 app.use(routes);
-// require("./controllers/projects_controller")(app);
-//and within the controller ...
-// * `selectAll()` 
-// * `insertOne()` build as in build-a-burger
-// * `updateOne()` 
-// app.use(routes);
-// require("./app/routing/apiRoutes")(app);
 
 app.listen(PORT,() => console.log("UFOs spotted on telescope  "+PORT));
