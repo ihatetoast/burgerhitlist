@@ -44,6 +44,9 @@ header, footer{
     }
   }
 }
+footer {
+  margin-top: 1em;
+}
 button {
   background: #3c1642;
   background-image: -webkit-linear-gradient(top, $eggplant, #732980);
@@ -51,10 +54,8 @@ button {
   -webkit-border-radius: 8;
   border-radius: 8px;
   color: $white;
-  font-size: 0.8em;
-  padding: 0.3em 0.4em 0.3em 0.4em;
   text-decoration: none;
-  margin-left: 0.5em;
+
 }
 button:hover{
   color: $lime;
@@ -121,8 +122,20 @@ button:hover{
     margin-top: 0.3em;
   }
   li{
-    font-size: 1.25em;
+    font-size: 1em;
+    line-height: 1.5em;
   }
+}
+.ufoData button {
+  font-size: 0.6em;
+  padding: 0.3em;
+  margin-left: 0.5em;
+}
+.ufoForm button {
+  font-size: 1em;
+  padding: 0.3em;
+  margin-top: 0.5em;
+  width: 100%;
 }
 input[type=text] {
   width: 100%;
