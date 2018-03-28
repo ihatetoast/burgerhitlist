@@ -28,6 +28,6 @@ const project ={
 
 
 
-//required by projects_controler
+//required by projects_controller
 module.exports = project;
 

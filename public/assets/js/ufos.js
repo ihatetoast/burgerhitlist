@@ -29,7 +29,7 @@ $(function(){
     var newProgState = {
       inProg: newprog
     };
-    console.log(newProgState);
+    // console.log(newProgState);
     //send to soiva
     $.ajax("/api/ufos/"+id, {
       type: "PUT",

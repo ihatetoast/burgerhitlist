@@ -2,9 +2,6 @@ var connection = require("./connection.js");
 
 // * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
-//   * `selectAll()` 
-//   * `insertOne()` 
-//   * `updateOne()` 
 
 function printQuestionMarks(num) {
   var arr = [];
@@ -57,7 +54,6 @@ var orm = {
   },
   update: function(table, colValsObject, condition, cb){
     var queryString = "UPDATE " + table + " SET " + objToSql(colValsObject) + " WHERE " + condition;
-    console.log(queryString);
     connection.query(queryString, function(err, result){
       if(err) throw err;
       cb(result);

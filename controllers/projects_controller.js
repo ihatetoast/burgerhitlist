@@ -22,7 +22,6 @@ router.post("/api/ufos", function(req, res) {
   ], [
     req.body.name, req.body.craft, req.body.inProg
   ], function(result) {
-
     res.json({ id: result.insertId });
   });
 });
@@ -38,6 +37,7 @@ router.delete("/api/ufos/:id", function(req, res){
     }
   });
 });
+
 //inProg
 router.put("/api/ufos/:id", function(req, res) {
   let condition = "id = "+req.params.id;
